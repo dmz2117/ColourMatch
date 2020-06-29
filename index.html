@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Colour Match</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="background-color: black">
+
+  <!-- Background Colour Beams and Mix Bar -->
+
+  <div id="blueBeam" class="beam beam-blue"></div>
+  <div id="greenBeam" class="beam beam-green"></div>
+  <div id="redBeam" class="beam beam-red"></div>
+  <div id="mixedBar" class="mixedbar"></div>
+
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand" href="#">
+      <img src="https://i.ibb.co/9r0V1tr/BGRsquare.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+      ColourMatch
+    </span>
+    <span>
+      <span id="Name">Name: </span>
+    <span id="Score">0</span>
+    </span>
+  </nav>
+
+  <!-- Modal Score Name Entry -->
+
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Challenge Complete -->
+
+  <div id="challengeComplete" class="card text-white bg-dark">
+    <div class="card-header">
+      Completed:
+    </div>
+    <ul id="challengeList" class="list-group list-group-flush">
+    </ul>
+  </div>
+
+
+  <!-- Timer -->
+
+  <div id="timerCard" class="card  text-white bg-dark">
+    <div class="card-header text-center">
+      Time elapsed:
+    </div>
+    <div class="card-body text-center">
+      00:00:00
+    </div>
+  </div>
+
+
+  <!-- Colour Control -->
+
+  <div id="colourControl" class="card text-white bg-dark">
+    <div class="card-header text-center">
+      Colour Control
+    </div>
+    <div class="card-body bg-primary">
+      <input type="range" class="custom-range" value="255" min="0" max="255" id="customRangeBlue"><span id="blueNumber" class="badge badge-light"></span>
+    </div>
+    <div class="card-body bg-success">
+      <input type="range" class="custom-range" value="255" min="0" max="255" id="customRangeGreen"><span id="greenNumber" class="badge badge-light"></span>
+    </div>
+    <div class="card-body bg-danger">
+      <input type="range" class="custom-range" value="255" min="0" max="255" id="customRangeRed"><span id="redNumber" class="badge badge-light"></span>
+    </div>
+  </div>
+
+  <!-- Current/Next Challenge -->
+
+  <div id="challengeCurrent" class="card text-white bg-dark">
+    <div class="card-header text-center">
+      Match this colour:
+    </div>
+    <div id="currentColour" class="card-body">
+    </div>
+    <div class="card-footer">
+      <div id="nextColour" class="row">
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Win -->
+  <!-- <div id="showWinCard"></div>
+      <div id="winCard" class="card text-white bg-dark">
+        <div class="card-header text-center">
+          You got them all!
+        </div>
+      </div>
+  </div>-->
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

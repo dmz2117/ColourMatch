@@ -1,0 +1,82 @@
+:root {
+  --blueValue: 255;
+  --greenValue: 255;
+  --redValue: 255;
+}
+
+.beam {
+  position: fixed;
+  height: 100%;
+}
+
+.beam-red {
+  left: calc(56.25% + (((255 - var(--redValue)) * 0.5%) / 2.55) * 0.125);
+  width: calc(((var(--redValue) * 1%) / 2.55) * 0.125);
+  background-color: #f00;
+}
+.beam-green {
+  left: calc(43.75% + (((255 - var(--greenValue)) * 0.5%) / 2.55) * 0.125);
+  width: calc(((var(--greenValue) * 1%) / 2.55) * 0.125);
+  background-color: #0f0;
+}
+.beam-blue {
+  left: calc(31.25% + (((255 - var(--blueValue)) * 0.5%) / 2.55) * 0.125);
+  width: calc(((var(--blueValue) * 1%) / 2.55) * 0.125);
+  background-color: #00f;
+}
+
+.mixedbar {
+  position: fixed;
+  height: 40%;
+  width: 37.5%;
+  bottom: 0;
+  left: 31.25%;
+  background-color: rgb(var(--redValue), var(--greenValue), var(--blueValue));
+}
+
+.colourCurrent {
+  width: 20vmin;
+  height: 20vmin;
+}
+
+.colourSmall {
+  width: 30px;
+  height: 30px;
+}
+
+#challengeCurrent {
+  position: fixed;
+  bottom: 5%;
+  right: 20px;
+  width: 28%;
+}
+
+#challengeComplete {
+  position: fixed;
+  top: 10%;
+  left: 20px;
+  width: 28%;
+}
+
+#timerCard {
+  position: fixed;
+  bottom: 5%;
+  left: 20px;
+  width: 28%;
+}
+
+#colourControl {
+  position: fixed;
+  top: 10%;
+  right: 20px;
+  width: 28%;
+}
+
+#winCard {
+  margin: auto;
+  font-size: 3em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: black;
+}
